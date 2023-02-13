@@ -1,0 +1,343 @@
+/***************************************cg系统样式********************************************/
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  //display:none;
+}
+/* 
+.left::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 5px rgba(14,14,14,0.2);
+      background: rgba(14,14,14,0.2);
+  }
+  .left::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 5px rgba(14,14,14,0.2);
+      border-radius: 0;
+      background: rgba(14,14,14,0.1);
+  }
+   */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #bfbfbf;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+input {
+  padding-left: 10px;
+}
+textarea {
+  padding: 8px 10px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.line {
+  float: left;
+  position: absolute;
+  left: -5px;
+  top: 12px;
+  width: 1px;
+  height: 25px;
+  background: #e5e5e5;
+}
+.btnClick {
+  position: relative;
+}
+.btnClick.btnClickLeft:after {
+  left: 0;
+}
+.btnClick.btnClickRight:after {
+  right: 0;
+}
+.btnClick.btnClickWave:after {
+  content: '';
+  background: #fff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 0 50px 50px 0;
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.btnClick.btnClickWave.btnClickRight:after {
+  content: '';
+  background: #fff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px 0 0 50px;
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.btnClick.btnClickWave:active:after {
+  width: 0px;
+  opacity: 1;
+  transition: 0s;
+}
+.btnClick.btnClickHalf:after {
+  content: '';
+  background: #fff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.btnClick.btnClickHalf:active:after {
+  width: 0px;
+  opacity: 1;
+  transition: 0s;
+}
+.btnClick.btnClickBubble:after {
+  content: '';
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.75s ease-in-out;
+}
+.btnClick.btnClickBubble:active:after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.aRow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.red {
+  color: red !important;
+}
+.green {
+  color: green !important;
+}
+.hover:hover {
+  color: #378dd8 !important;
+  cursor: pointer;
+}
+img {
+  transition: all ease 0.5s;
+}
+img[lazy='loading'] {
+  opacity: 0;
+}
+// img[lazy='error'] {
+
+// }
+img[lazy='loaded'] {
+  opacity: 1;
+}
+.dataList {
+  position: relative;
+  z-index: 100;
+}
+.dataList img {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.dataList img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+}
+.imgOpacity {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.imgOpacity:hover {
+  opacity: 0.1;
+  cursor: pointer;
+}
+.clean {
+  clear: both;
+}
+.h1 {
+  font-weight: 700!important;
+}
+.h2 {
+  font-weight: 500!important;
+}
+.h3 {
+  font-weight: 400!important;
+}
+.h4 {
+  font-weight: 300!important;
+}
+.h5 {
+  font-weight: 100!important;
+}
+.h6 {
+  font-weight: 900!important;
+}
+
+.el-table .cell{
+  cursor: pointer;
+}
+.el-table .cell::after {
+ /*  content: '';
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.75s ease-in-out; */
+}
+.el-table .cell:active:after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+}
+.el-table .fixed-width .el-button--mini {
+  position: relative;
+  z-index: 1;
+}
+
+@mixin effect {
+  position: fixed;
+  z-index: 0;
+  opacity: 0;
+}
+.effect {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  transition: all ease 0.5s;
+  opacity: 0;
+}
+.is_effect {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  opacity: 1;
+}
+.no_effect {
+  top: 0;
+  @include effect;
+}
+.off_effect {
+  top: -100vh;
+  @include effect;
+}
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body, html{
+  color: #444;
+  padding: 0;
+  margin: 0;
+  //font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-family: Noto Sans SC!important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+/***************************************cg系统样式 end********************************************/

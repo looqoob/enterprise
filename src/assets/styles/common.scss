@@ -1,0 +1,86 @@
+/***************************************  全局公共样式  ********************************************/
+/* 滚动条全局样式 */
+// 仿苹果滚动条
+@mixin efe_scroll {
+  height: 100%;
+  overflow: auto;
+  /* 火狐 */
+  scrollbar-color: rgba(144, 147, 153, 0.5) transparent;
+  scrollbar-width: thin;
+  // 滚动条外框
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  // 滚动条的轨道两端按钮
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  // 滚动条的轨道
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  // 滚动条
+  &::-webkit-scrollbar-thumb {
+    background: rgba(144, 147, 153, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  // 边角
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+  // 控件
+  &::-webkit-resizer {
+    display: none;
+  }
+}
+h1{
+  color: #00e9bf;
+}
+// 饿了么表格
+.el-table--scrollable-x .el-table__body-wrapper {
+  @include efe_scroll;
+}
+// json
+.ace_scrollbar-v {
+  @include efe_scroll();
+}
+.ace_scrollbar-h {
+  @include efe_scroll();
+}
+
+.efe_scroll {
+  @include efe_scroll();
+}
+
+// 关闭滚动条
+.efe_scroll_no {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// 超过一行出现省略号
+@mixin efe_ellipsis {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 1;
+
+  /*! autoprefixer: off */
+
+  -webkit-box-orient: vertical;
+}
+.el-table td.el-table__cell div {
+  @include efe_ellipsis;
+}
+/* 滚动条全局样式 end */
+/***************************************  全局公共样式end  ********************************************/
