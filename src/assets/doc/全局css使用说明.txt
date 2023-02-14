@@ -1,0 +1,65 @@
+文字内容溢出...
+class="aRow"
+
+
+手指选中颜色样式class
+class="hover"
+
+一条线class
+class="line"
+
+class="dataList"  图片放大缩小
+增加class="imgOpacity" 选中高亮蒙层
+
+系统模块form
+label-width="68px"
+600
+label-width="85px"
+
+label-width="68px"
+800
+label-width="120px"
+
+
+.h1 {
+    font-weight: 700!important;
+}
+.h2 {
+    font-weight: 500!important;
+}
+.h3 {
+    font-weight: 400!important;
+}
+.h4 {
+    font-weight: 300!important;
+}
+.h5 {
+    font-weight: 100!important;
+}
+.h6 {
+    font-weight: 900!important;
+}
+
+按钮点击效果
+btnClick btnClickWave btnClickLeft   从左往右 - 半圆
+btnClick btnClickWave btnClickRight  从左往右 - 半圆
+
+btnClick btnClickHalf btnClickLeft   从右往左
+btnClick btnClickHalf btnClickRight   从左往右
+
+btnClick btnClickBubble             中心圆
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+
+/**
+ * ******************************************moment自定义获取时间**********************************
+ * demo:
+ * import moment from 'moment';
+ * moment().format('YYYY-MM-DD HH:mm:ss') or moment('2020-04-17')
+ * moment().add(-1, 'y').format('YYYY-MM-DD') 当前时间-1年
+ * moment().add(-1, 'M').format('YYYY-MM-DD') 当前时间-1月
+ * moment().month(moment().month() - 1).format("YYYY-MM-DD"),
+ */
+
+仿苹果滚动条
+class="efe_scroll"

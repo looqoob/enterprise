@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.header_container {
+  position: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600px;
+}
+
+.el-header {
+  height: 48px !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.el-aside {
+  height: calc(100vh - 80px) !important;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+}
+
+.el-menu {
+  border-right: 0 !important;
+}
+
+.scrollbar-wrapper {
+  overflow-x: hidden !important;
+}
